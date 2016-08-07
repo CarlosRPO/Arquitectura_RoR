@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: session_logs
+#
+#  id            :integer          not null, primary key
+#  user_name     :string
+#  logged_date   :date
+#  success       :boolean
+#  error_message :string
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_name: MyString
+  logged_date: 2016-08-04
+  success: false
+  error_message: MyString
+
+two:
+  user_name: MyString
+  logged_date: 2016-08-04
+  success: false
+  error_message: MyString

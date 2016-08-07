@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: destinations
+#
+#  id         :integer          not null, primary key
+#  city       :string
+#  country    :string
+#  price      :integer          default(0)
+#  taxes      :integer          default(0)
+#  total      :integer          default(0)
+#  status     :boolean          default(TRUE)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: MyString
+  country: MyString
+  price: 1
+  taxes: 1
+  total: 1
+  status: false
+
+two:
+  city: MyString
+  country: MyString
+  price: 1
+  taxes: 1
+  total: 1
+  status: false

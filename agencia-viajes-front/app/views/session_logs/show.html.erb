@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @session_log.user_name %>
+</p>
+
+<p>
+  <strong>Logged date:</strong>
+  <%= @session_log.logged_date %>
+</p>
+
+<p>
+  <strong>Success:</strong>
+  <%= @session_log.success %>
+</p>
+
+<p>
+  <strong>Error message:</strong>
+  <%= @session_log.error_message %>
+</p>
+
+<%= link_to 'Edit', edit_session_log_path(@session_log) %> |
+<%= link_to 'Back', session_logs_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Session Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Logged date</th>
+      <th>Success</th>
+      <th>Error message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @session_logs.each do |session_log| %>
+      <tr>
+        <td><%= session_log.user_name %></td>
+        <td><%= session_log.logged_date %></td>
+        <td><%= session_log.success %></td>
+        <td><%= session_log.error_message %></td>
+        <td><%= link_to 'Show', session_log %></td>
+        <td><%= link_to 'Edit', edit_session_log_path(session_log) %></td>
+        <td><%= link_to 'Destroy', session_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Session log', new_session_log_path %>

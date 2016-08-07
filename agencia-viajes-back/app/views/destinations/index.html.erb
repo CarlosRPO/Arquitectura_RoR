@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Destinations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Country</th>
+      <th>Price</th>
+      <th>Taxes</th>
+      <th>Total</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @destinations.each do |destination| %>
+      <tr>
+        <td><%= destination.city %></td>
+        <td><%= destination.country %></td>
+        <td><%= destination.price %></td>
+        <td><%= destination.taxes %></td>
+        <td><%= destination.total %></td>
+        <td><%= destination.status %></td>
+        <td><%= link_to 'Show', destination %></td>
+        <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
+        <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Destination', new_destination_path %>

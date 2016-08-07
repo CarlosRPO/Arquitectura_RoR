@@ -1,0 +1,33 @@
+<%= form_for(@session_log) do |f| %>
+  <% if @session_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@session_log.errors.count, "error") %> prohibited this session_log from being saved:</h2>
+
+      <ul>
+      <% @session_log.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_name %><br>
+    <%= f.text_field :user_name %>
+  </div>
+  <div class="field">
+    <%= f.label :logged_date %><br>
+    <%= f.date_select :logged_date %>
+  </div>
+  <div class="field">
+    <%= f.label :success %><br>
+    <%= f.check_box :success %>
+  </div>
+  <div class="field">
+    <%= f.label :error_message %><br>
+    <%= f.text_field :error_message %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
